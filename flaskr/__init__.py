@@ -29,4 +29,7 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
+    from . import main
+    app.register_blueprint(main.bp)
+
     return app
